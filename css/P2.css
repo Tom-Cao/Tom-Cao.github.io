@@ -38,7 +38,8 @@ form.search-box {
     width: 35%;
     margin-top: 1.3em;
     margin-left: 2em;
-    font-size: 1.4em;
+    font-size: 1.3em;
+    line-height: normal;
 }
 
 form.search-box input[type=text] {
@@ -57,7 +58,7 @@ form.search-box button {
     background: white;
     cursor: pointer;
     float: left;
-    width: 10%;
+    width: auto;
     outline-width: 0;
 }
 
@@ -106,7 +107,8 @@ form a:hover {
 
 /* MAIN SECTION */
 #products {
-    min-height: 100vh;
+    /* min-height: 50vh; */
+    min-height: 70vh;
     width: 95%;
     text-align: center;
 }
@@ -137,7 +139,6 @@ form a:hover {
 
 .title h1 {
     text-align: center;
-    font-family: fantasy;
     color: rgb(41, 40, 39);
     font-size: 2em;
     letter-spacing: 0.1em;
@@ -252,6 +253,11 @@ footer {
     form.icons {
         margin-left: 1em;
     }
+
+    #products img {
+        width: 50%;
+    }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -319,7 +325,7 @@ footer {
 
 @media only screen and (max-width: 500px) {
     #menu form.icons {
-        margin-left: 15%;
+        margin-left: 7%;
     }
 
     #covid-news .button {
@@ -355,7 +361,6 @@ footer {
     form.search-box {
         width: auto;
         font-size: 1.2em;
-        
     }
 
     form.search-box input[type=text] {
@@ -364,6 +369,10 @@ footer {
 
     form.search-box button {
         width: 15%;
+    }
+
+    .dropdown-menu li {
+        width: 100%;
     }
 
     #covid-news .button {

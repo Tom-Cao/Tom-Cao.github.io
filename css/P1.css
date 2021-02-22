@@ -32,7 +32,6 @@
 #menu #logo {
     float: left;
     width: 150px;
-
 }
 
 form.search-box {
@@ -41,7 +40,8 @@ form.search-box {
     width: 35%;
     margin-top: 1.3em;
     margin-left: 2em;
-    font-size: 1.4em;
+    font-size: 1.3em;
+    line-height: normal;
 }
 
 form.search-box input[type=text] {
@@ -60,7 +60,7 @@ form.search-box button {
     background: white;
     cursor: pointer;
     float: left;
-    width: 10%;
+    width: auto;
     outline-width: 0;
 }
 
@@ -423,7 +423,6 @@ footer {
     .dropdown-menu li {
         width: 100%;
     }
-    
 
     #covid-news .button {
         padding: 1.2em;
