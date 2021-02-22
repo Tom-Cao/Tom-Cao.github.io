@@ -15,9 +15,13 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../css/P1.css">
     <link rel="stylesheet" type="text/css" href="../css/P7.css">
+    <link rel="stylesheet" type="text/css" href="../css/P11.css">
+    <link rel="stylesheet" type="text/css" href="../css/P12.css">
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/5995e1d6ee.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -28,9 +32,35 @@
 
 <body>
 
-    <header id="header">
-        <a href="p1.html"> Cloud Grocery Inventory </a>
-    </header>
+<header id="header">
+     <a href="p1.html"> Cloud Grocery Inventory </a>
+</header>
+
+ <!-- Menu created from Bootstrap template -->
+ <nav class = "navbar navbar-light navbar-expand-lg bg-light">
+    <div class = "container-fluid">
+      <a class = "navbar-brand" href = "#">
+        <img src = "../images/cloud.jpg" id = "logo" type = "image/jpg" class="align-top">
+      </a>
+       <form class = "search">
+           <span class = "fa fa-search"></span>
+           <input class = "ID_Search" type = "search" placeholder = "Product Inventory Search">
+       </form>
+      <button class = "navbar-toggler" type = "button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class = "navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+       <div class="navbar-nav ms-auto">
+         <a class="nav-link active" aria-current="page" href="#">Product List</a>
+         <a class="nav-link" href="P1.html">Homepage</a>
+         <a class='nav-link' href="P5.html">Login</a>
+         <a class="nav-link" href="P9.html">User List</a>
+         <a class="nav-link" href="P11.html">Order List</a>
+       </div>
+     </div>
+    </div>
+ </nav>
+
 
 <!-- BUTTONS TO EDIT INVENTORY -->
 <div style="text-align:center;">
@@ -39,6 +69,8 @@
 <button class="button button2"> Delete </button>
 <button class="button button3"> Edit </button>
 </form>
+
+<!-- LIST OF INVENTORY -->
 <div style="text-align:center;">
 <table>
 <p><h5>Inventory of featured items</h5></p>
@@ -164,6 +196,7 @@
 </table>
 </div>
 
+<!-- FOOTER -->
 <br>
 <footer>
     <div id="copyright">
