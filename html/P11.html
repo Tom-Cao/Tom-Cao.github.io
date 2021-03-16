@@ -19,6 +19,8 @@
 
   <link rel = "shortcut icon" type = "img/jpg" href = "../images/cloud.jpg"/>
   <link rel = "stylesheet" type = "text/css" href = "../css/P11.css"/>
+  
+  <script type = "text/javascript" src = "../js/P11.js"></script>
 
 </head>
 
@@ -55,18 +57,18 @@
   </nav>
 
 
-  <div class="card">
+  <div class="card" id = "card1">
     <div class="card-body">
       <img class = "avatar" src = "../images/default_avatar.png"/>
-      <h4 class="card-title">Tommy</h4>
-      <h6 class = "card-title">CAO</h6>
+      <h4 class="card-title" id = "FirstName">Tommy</h4>
+      <h6 class = "card-title" id = "LastName">CAO</h6>
       <p1 class="card-text" id = "Order ID">Order ID: #00426719572</p1>
       <br />
       <br />
       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#list1" aria-expanded="false" aria-controls="collapseExample">
         Show Order Info
       </button>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#cancel1" aria-expanded="false" aria-controls="collapseExample">
+      <button class="btn btn-primary" type="button" onclick = "deleteCard('card1')">
         Cancel Order
       </button>
       <a href = "P12-1.html">
@@ -152,23 +154,23 @@
     </div>
   </div>
      
-  <div class="card">
+  <div class="card" id = "card2">
     <img class="card-img-left" src="holder.js/100x180/" alt="">
     <div class="card-body">
       <img class = "avatar" src = "../images/default_avatar.png"/>
-      <h4 class="card-title">Joe</h4>
-      <h6 class = "card-title">El-KHOURY</h6>
+      <h4 class="card-title" id = "FirstName">Joe</h4>
+      <h6 class = "card-title" id = "LastName">El-KHOURY</h6>
       <p1 class = "card-text" id = "Order ID">Order ID: #68281968176</p1>
       <br />
       <br />
       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#list2" aria-expanded="false" aria-controls="collapseExample">
         Show Order Info
       </button>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#cancel2" aria-expanded="false" aria-controls="collapseExample">
+      <button class="btn btn-primary" type="button" onclick = "deleteCard('card2')">
         Cancel Order
       </button>
       <a href = "P12-2.html">
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#modify2" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-primary" type="button">
         Modify Order
         </button>
       </a>

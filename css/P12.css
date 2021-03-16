@@ -20,18 +20,55 @@ nav #logo
   margin-right: -6px;
 }
 
+button.button{
+  border-color:rgb(61, 123, 238);
+  border-style:double;
+  border-radius: 10px;
+  color:white;
+  background-color:rgb(16, 3, 202);
+  transition: border-color 0.3s;
+  transition: box-shadow 0.3s;
+}
+
+button.button#delete{
+  background-color:rgb(165, 0, 0);
+  border-color:rgb(100,0,0);
+  transition: border-color 0.3s;
+  transition: box-shadow 0.3s;
+}
+
+button.button#delete:hover
+{
+  border-color:rgb(100,0,0);;
+  box-shadow: 2px 0px 10px 0px rgb(100,0,0);;
+}
+
+button.button:hover
+{
+  border-color:rgb(61, 123, 238);
+  box-shadow: 2px 0px 10px 0px rgb(61, 123, 238);
+}
+
 input[type = checkbox] {
   width: 50px;
 }
 
+select{
+  border-radius: 10px;
+  width:100%;
+  font-size: 15px;
+  float:left;
+
+}
+
 form [type = text]{
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   outline: none;
   border-style: double;
   border-color:cornflowerblue;
   transition: border-color 0.3s;
   transition: box-shadow 0.3s;
-  width: 50px;
+  width: 30%;
   text-align: center;
 }
 

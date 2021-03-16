@@ -283,3 +283,41 @@
 footer {
     top: 0px;
 }
+
+
+/* Emptl cart Placeholder */
+
+@import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+body {
+    background-color: #eee;
+    font-family: 'Calibri', sans-serif !important
+}
+
+.mt-100 {
+    margin-top: 20px;
+}
+
+.card {
+    margin-bottom: 30px;
+    border: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    letter-spacing: .5px;
+    border-radius: 8px;
+    border: none;
+    -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+    box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+    width: 870px;
+}
+
+.card .card-header {
+    background-color: white;
+    border-bottom: none;
+    padding: 24px;
+}
+
+@media only screen and (max-width: 1288px) {
+    .card {
+        max-width: 200px;
+    }
+}

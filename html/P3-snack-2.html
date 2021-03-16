@@ -13,6 +13,7 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../css/P1.css">
+    <link rel="stylesheet" href="../css/P3-snacks.css">
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/5995e1d6ee.js" crossorigin="anonymous"></script>
@@ -22,6 +23,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type = "text/javascript" src = "../js/P3-snacks.js"></script>
+
 
 </head>
 
@@ -80,53 +84,116 @@
         </div>
     </nav>
 
-    <!-- COVID NEWS ARTICLE -->
-    <div id="covid-news">
-        <a href="404_Error.html" class="button">INFORMATION ABOUT COVID-19</a>
+    <div class = "productCard">
+        <div class = "image">
+            <img src = "../images/cashews.jpg" class = "productImage">
+            <hr>
+            <h4>PLANTER's Salted Cashews are wonderful to eat!</h4>
+            <h4>They are a source of energy and iron to the body.</h4>
+            <h4>With 9g of protein, you're guaranteed to work all day!</h4>
+        </div>
+        <div id = "ProductInfo">
+            <h1 id = "item_name">Cashews</h1>
+            <hr>
+            <div class = "price">
+                <h2>$3.99 each</h2>
+            </div>
+
+            <div class = "add_to_cart">
+                <select class = "form-select" id = "select">
+                    <option value = "0" selected>Quantity</option>
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                </select>
+                <button id = "add_to_cart" onclick = "addToCart()">Add to Cart</button>
+            </div>
+            
+        </div>
+        <div class="desc">
+            <table id = "nutrition_facts">
+                <th colspan = 2>Nutritious Facts (per Serving)</th>
+                <tr>
+                    <td>Serving Size</td>
+                    <td class = "right_aligned">1/3 cup (50g)</td>
+                </tr>
+                <tr>
+                    <td colspan = 2><hr></td>
+                </tr>
+                <tr>
+                    <td><strong>Calories</strong></td>
+                    <td class = "right_aligned">320</td>
+                </tr>
+                <tr>
+                    <td colspan = 2><hr></td>
+                </tr>
+                <tr>
+                    <td colspan = 2 class = "right_aligned" id = "small">% Daily Values*</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Fat 26.00g</strong></td>
+                    <td class = "right_aligned">40%</td>
+                </tr>
+                <tr>
+                    <td class = "small">Saturated Fat 5.00g</td>
+                    <td class = "right_aligned" id = "small">25%</td>
+                </tr>
+                <tr>
+                    <td class = "small"><i>Trans </i>Fat 0.1g</td>
+                    <td class = "right_aligned" id = "small">1%</td>
+
+                </tr>
+                <tr>
+                    <td><strong>Cholesterol </strong>0mg</td>
+                    <td class = "right_aligned">0%</td>
+                </tr>
+                <tr>
+                    <td><strong>Sodium </strong>140mg</td>
+                    <td class = "right_aligned">6%</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Carbohydrate </strong>14.00g</td>
+                    <td class = "right_aligned">5%</td>
+                </tr>
+                <tr>
+                    <td class = "small">Dietary Fiber 3.0g</td>
+                    <td class = "right_aligned" id = "small">12%</td>
+                </tr>
+                <tr>
+                    <td class = "small" colspan = "2">Sugars 3.0g</td>
+                </tr>
+                <tr>
+                    <td colspan = "2"><strong>Protein </strong>9.0g</td>
+                </tr>
+                <tr>
+                    <td colspan = 2><hr></td>
+                </tr>
+                <tr>
+                    <td>Vitamin A</td>
+                    <td class = "right_aligned">0%</td>
+                </tr>
+                <tr>
+                    <td>Calcium</td>
+                    <td class = "right_aligned">2%</td>
+                </tr>
+                <tr>
+                    <td>Iron</td>
+                    <td class = "right_aligned">15%</td>
+
+                </tr>
+                <tr>
+                    <td>Calcium</td>
+                    <td class = "right_aligned">2%</td>
+                </tr>
+                <tr>
+                    <td colspan = 2><hr></td>
+                </tr>
+            </table>
+        </div>
+
     </div>
 
-    <!-- MAIN SECTION -->
-    <section id="main-section">
-        <div id="delivery">
-            <a href="">
-                <h2>FREE HOME DELIVERY</h2>
-                <p>*free delivery on orders $50+*</p>
-                <img src="../images/freedelivery.png" alt="free delivery image"> <br>
-                <a href="404_Error.html" class="btn btn-dark" role="button">Shop now!</a>
-            </a>
-        </div>
-    </section>
-
-    <!-- WEEKLY DEALS-->
-    <div id="featured-products" class="row">
-        <h2 id="title">WEEKLY DEALS</h2>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-1.html"><img src="../images/pizza.jpg" alt="pizza"></a> <br/>
-            <a href="P3-Frozen-1.html"><h4>Frozen Pepperoni Pizza</h4></a>
-            <p class="price1">$3.99 each</p>
-        </div>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-2.html"><img src="../images/fries.jpg" alt="fries"></a> <br/>
-            <a href="P3-Frozen-2.html"><h4>Frozen Fries</h4></a>
-            <p class="price2">$3.59 each</p>
-        </div>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-3.html"><img src="../images/eggo.jpg" alt="eggo"></a> <br/>
-            <a href="P3-Frozen-3.html"><h4>Original Waffles</h4></a>
-            <p class="price3">$2.99 each</p>
-        </div>
-        <a href="404_Error.html" id="moreProducts">Show more products</a>
-    </div>
-
-    <!-- SOCIAL MEDIA ARTICLE-->
-    <div id="article">
-        <a href="404_Error.html"> <i class="fa fa-youtube-play"></i></a>
-        <a href="404_Error.html"> <i class="fa fa-twitter"></i></a>
-        <a href="404_Error.html"> <i class="fa fa-facebook-official"></i></a>
-        <a href="404_Error.html"> <i class="fa fa-instagram"></i></a>
-    </div>
-
-    <!-- FOOTER -->
     <footer>
         <div id="information">
             <div id="about-us">
@@ -167,11 +234,7 @@
         <div id="copyright">
             <h6> &copy; Copyright Cloud 2021</h6>
         </div>
-
     </footer>
-
-    <script type="text/javascript" src="../js/p1.js"></script>
-    <script type="text/javascript" src="../js/p3-frozen.js"></script>
-
+    
 </body>
 </html>

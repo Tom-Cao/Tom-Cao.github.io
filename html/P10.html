@@ -16,7 +16,7 @@
 			something completly different (since this web page needs to have the same style as the item page).-->
 		 <!-- Custom Stylesheet -->
 		 <link rel="stylesheet" href="../css/P1.css">
-		 <link rel="stylesheet" type="text/css" href="../css/P7.css">
+		 <link rel="stylesheet" type="text/css" href="../css/P10.css">
 	 
 		 <!-- Font Awesome CDN -->
 		 <script src="https://kit.fontawesome.com/5995e1d6ee.js" crossorigin="anonymous"></script>
@@ -27,33 +27,59 @@
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
          
+		 <!-- Custom Scripts -->
+		<script src="../js/P9.js"></script>
+
 	</head>
     
 	    <body>
 		<header id="header">
 		    <a href="../html/P1.html"> Cloud Grocery User List </a>
 		</header>
-		<br>
+		
+		<!-- Menu created from Bootstrap template -->
+		<nav class = "navbar navbar-light navbar-expand-lg bg-light">
+			<div class = "container-fluid">
+				<a class = "navbar-brand" href = "#">
+					<img src = "../images/cloud.jpg" id = "logo" type = "image/jpg" class="align-top">
+				</a>
+				<button class = "navbar-toggler" type = "button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class = "navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav ms-auto">
+						<a class="nav-link active" aria-current="page" href="#">Edit Users</a>
+						<a class='nav-link' href="P5.html">Login</a>
+						<a class="nav-link" href="P1.html">Homepage</a>
+						<a class="nav-link" href="P7.html">Product List</a>
+						<a class="nav-link" href="P9.html">User List</a>
+						<a class="nav-link" href="P11.html">Order List</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<br/>
 		<div style="text-align:center;">
 		<h3>Login information of the user:</h3>
 		<form action="">
 			<label>Username:</label>
 			<input type ="text" name="Username" />
-			</br> </br>
+			<br/> <br/>
 			<label>Users password:</label>
 			<input type ="text" name="Password" />
 		</form>
-		</br> <br/>
+		<br/> <br/>
 
 		<h3>Personnal information of the user:</h3>
 		<form action="">
 			<label>First name of the user:</label>
-			<input type ="text" name="FirstName" />
-			</br> </br>
+			<input type ="text" name="Firstname" />
+			<br/> <br/>
 			<label>Last name of the user:</label>
-			<input type ="text" name="FirstName" />
+			<input type ="text" name="Firstname" />
 		</form>
-		</br>
+		<br/>
 		<form>
 			<label>Users email:</label>
 			<input type="text" name="email">
@@ -76,19 +102,19 @@
 				  if(theEvent.preventDefault) theEvent.preventDefault();
 				}
 			}</script>
-			</br> </br>
+			<br/> <br/>
 			<label>Phone number:</label>
 			(<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="XXX" aria-label="3-digit area code" size="1" maxlength="3" onkeypress='validate(event)'/>)
    				<input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="XXX" aria-label="3-digit prefix" size="1" maxlength="3" onkeypress='validate(event)'/> -
 			   	<input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="XXXX" aria-label="4-digit number" size="1" maxlength="4" onkeypress='validate(event)'/>
 		</form>
-		</br> <br/>
+		<br/> <br/>
 
 		<h3>Address information of the user:</h3>
 		<form name="address_type" action="#">
 			<label>House number:</label>
 				<input type="number" name="AddressNumber">  
-			</br> </br>
+			<br/> <br/>
 
 			<label>Address type:</label>
 			<select name="address_type" onchange="if(this.options[this.selectedIndex].value=='Other'){
@@ -101,7 +127,7 @@
 				<option value="Other">Other</option>
 			</select>
 			<input name="address_type" style="display:none;" disabled="disabled" onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
-			</br> </br>
+			<br/> <br/>
 
 			<label>Street name:</label>&nbsp;
 			<textarea name ="address" rows = "2" columns = "20"></textarea>
@@ -119,12 +145,14 @@
 			<input type="text" name="Country">
 		</form>
 		<br/> <br/>
-		<form action ="../html/P9.html">
-			<p> Click to confirm any changes: </p>
-			<button>  Save </button>
+
+		<form action ="P9.html">
+		<p> Click to confirm any changes </p>
+		<button class="button button1" id = "save" onclick="productUpdate();"><i class="far fa-save"></i> Save </button>
 		</form>
 		</div>
-		<br>
+
+		<br/>
 		<footer>
 			<div id="copyright">
 				<h6> &copy; Copyright Cloud 2021</h6>

@@ -1,4 +1,5 @@
 /* Button */
+
 .cartBtn {
     float: left;
     background-color: #f4f4f4;
@@ -9,17 +10,55 @@
     margin-right: 30px;
 }
 
+.decoration {
+    background-image: linear-gradient( rgb(52, 177, 235), rgb(4, 108, 199));
+    margin-bottom: 0px;
+    border: none;
+    border-radius: none;
+    color: #f4f4f4;
+    font-weight: lighter;
+}
+
+.fade:not(.show) {
+    opacity: 1;
+}
+
 .cart {
     height: 30px;
 }
 
 .cartBtn:hover {
-    background-color: rgb(4, 108, 199);
-    border: rgb(4, 108, 199);
+    background-color: #ddadad;
+    border: #ddadad;
+}
+
+.discription2 {
+    display: flex;
+    flex-direction: row;
+    border: none;
+}
+
+.discription2:active {
+    border: none;
+}
+
+.discription2 img {
+    width: 50px;
+    margin-left: 280px;
+}
+
+.discription button {
+    background-color: white;
+    border: none;
+}
+
+.discription button {
+    outline: none;
 }
 
 
 /* Image */
+
 .productCard {
     display: flex;
     flex-direction: row;
@@ -34,7 +73,7 @@
 }
 
 .drop-btn {
-    background-color: rgb(4, 108, 199);
+    background-color: rgb(177, 66, 66);
 }
 
 .image {
@@ -65,7 +104,7 @@
 }
 
 .discription p {
-    color: rgb(4, 108, 199);
+    color: #ee9c9c;
 }
 
 .heading1 {
@@ -120,7 +159,7 @@
     border: none;
     border-radius: 0px;
     margin-left: 0px;
-    border:none;
+    border: none;
 }
 
 .card-title {
@@ -210,5 +249,3 @@ footer {
     position: relative;
     top: 271px;
 }
-
-

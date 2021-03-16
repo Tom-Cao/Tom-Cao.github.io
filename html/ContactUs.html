@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Online Grocery | Cloud</title>
+    <title>Contact Us | Cloud</title>
 
     <!-- Meta tags-->
     <meta charset="UTF-8">
@@ -13,6 +13,7 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../css/P1.css">
+    <link rel="stylesheet" href="../css/ContactUs.css">
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/5995e1d6ee.js" crossorigin="anonymous"></script>
@@ -24,12 +25,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header id="header">
-        <a href="P1.html" class="display-4"> <span id="title">CLOUD</span> ONLINE GROCERY </a>
+    <a href="P1.html" class="display-4"> <span id="title">CLOUD</span> ONLINE GROCERY </a>
     </header>
 
     <!-- MENU -->
@@ -51,7 +51,6 @@
     </div>
 
     <!-- NAVIGATION BAR -->
-    <!-- Obtained from https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-light">
         <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -80,42 +79,57 @@
         </div>
     </nav>
 
-    <!-- COVID NEWS ARTICLE -->
-    <div id="covid-news">
-        <a href="404_Error.html" class="button">INFORMATION ABOUT COVID-19</a>
-    </div>
+    <!-- CONTACT US FORM -->
+    <div id="contact-us">
 
-    <!-- MAIN SECTION -->
-    <section id="main-section">
-        <div id="delivery">
-            <a href="">
-                <h2>FREE HOME DELIVERY</h2>
-                <p>*free delivery on orders $50+*</p>
-                <img src="../images/freedelivery.png" alt="free delivery image"> <br>
-                <a href="404_Error.html" class="btn btn-dark" role="button">Shop now!</a>
-            </a>
+        <div id="contact-title">
+            <h1>Contact Us</h1>
+            <h6>Please fill this form in a decent manner.</h6>
         </div>
-    </section>
 
-    <!-- WEEKLY DEALS-->
-    <div id="featured-products" class="row">
-        <h2 id="title">WEEKLY DEALS</h2>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-1.html"><img src="../images/pizza.jpg" alt="pizza"></a> <br/>
-            <a href="P3-Frozen-1.html"><h4>Frozen Pepperoni Pizza</h4></a>
-            <p class="price1">$3.99 each</p>
-        </div>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-2.html"><img src="../images/fries.jpg" alt="fries"></a> <br/>
-            <a href="P3-Frozen-2.html"><h4>Frozen Fries</h4></a>
-            <p class="price2">$3.59 each</p>
-        </div>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-3.html"><img src="../images/eggo.jpg" alt="eggo"></a> <br/>
-            <a href="P3-Frozen-3.html"><h4>Original Waffles</h4></a>
-            <p class="price3">$2.99 each</p>
-        </div>
-        <a href="404_Error.html" id="moreProducts">Show more products</a>
+        <form action="" id="form">
+
+            <div>
+                <p id="checkPhoneNumber" class="checkValidity">Incorrect Phone Number. Try Again. </p>
+                <p id="checkOrderNumber" class="checkValidity">Incorrect Order Number. Try Again.</p>
+            </div>
+
+            <div>
+                <label for="fname">First Name<span id="asterisk">*</span></label>
+                <input type="text" name="fname" id="fname" class="input" required> 
+            </div>
+
+            <div>
+                <label for="lname">Last Name<span id="asterisk">*</span></label>
+                <input type="text" name="lname" id="lname" class="input" required> 
+            </div>
+
+            <div>
+                <label for="phone">Phone<span id="asterisk">*</span></label>
+                <input type="text" name="phone" id="phone" class="input" placeholder="999-999-9999" required> 
+            </div>
+
+            <div>
+                <label for="email">Email Address</label>
+                <input type="text" name="email" id="email" class="input">
+            </div>
+
+            <div>
+                <label for="item">Item Name<span id="asterisk">*</span></label>
+                <input type="text" name="item" id="item" class="input" required> 
+            </div>
+            
+            <div>
+                <label for="order">Order Number<span id="asterisk">*</span></label>
+                <input type="text" name="order" id="order" class="input" placeholder="#12345AB" required> 
+            </div>
+
+            <label for="comments" id="commentsLabel">Comments/Questions</label>
+            <textarea name="comments" id="comments" cols="50" rows="6" required></textarea> <br/> <br/>
+    
+            <button type="submit" onclick="validateForm()">Submit Form</button>
+        </form>
+
     </div>
 
     <!-- SOCIAL MEDIA ARTICLE-->
@@ -140,7 +154,7 @@
             <div id="customer-service">
                 <h1>CUSTOMER SERVICE</h1>
                 <ul>
-                    <li><a href="ContactUs.html">Contact US</a></li>
+                    <li><a href="404_Error.html">Contact US</a></li>
                     <li><a href="404_Error.html">FAQ</a></li>
                     <li><a href="404_Error.html">Privacy Policy</a></li>
                     <li><a href="404_Error.html">Terms and Conditions</a></li>
@@ -170,8 +184,6 @@
 
     </footer>
 
-    <script type="text/javascript" src="../js/p1.js"></script>
-    <script type="text/javascript" src="../js/p3-frozen.js"></script>
-
+    <script type="text/javascript" src="../js/ContactUs.js"></script>
 </body>
 </html>

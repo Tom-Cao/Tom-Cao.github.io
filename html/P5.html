@@ -60,13 +60,13 @@
                     <ul class="dropdown-menu bg-gray">
                         <li><a href="P2-1.html">Fruits & Vegetables</a></li>
                         <li><a href="P2-2.html">Dairy & Eggs</a></li>
-                        <li><a href="#">Beverages</a></li>
-                        <li><a href="#">Meat & Poultry</a></li>
-                        <li><a href="#">Frozen</a></li>
+                        <li><a href="P2-3.html">Beverages</a></li>
+                        <li><a href="P2-4.html">Meat & Poultry</a></li>
+                        <li><a href="P2-5.html">Frozen</a></li>
+                        <li><a href="P2-6.html">Snacks</a></li>
                         <li><a href="#">Organic Foods</a></li>
                         <li><a href="#">Beer & Wine</a></li>
                         <li><a href="#">Canned Goods</a></li>
-                        <li><a href="#">Snacks</a></li>
                         <li><a href="#">Seafood</a></li>
                     </ul>
                 </li>
@@ -76,31 +76,40 @@
             </ul>
         </div>
     </nav>
+
+    <!-- SIGN IN FORM -->
     <div class="container" id="register">
         <div class="title">
             <h2>Sign in:</h2>
         </div>
-        <form action="">
+        <form action="" id="form">
             <label>Username:</label>&nbsp;
-            <input type="text" name="Username" onfocus="this.value=''" value="Username" />
-        </form> <br/>
-        <form action="">
+            <input type="text" name="Username" onfocus="this.value=''" value="Username" required/>
+            <br/><br/>        
             <label>Password:</label>&nbsp;
-            <input type="password" name="Password">
-        </form> <br/>
-        <button type="submit" class="btn btn-secondary">Forgot your password ?</button>
-        <br/><br/>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+            <input type="password" name="Password" required>
+            <br/><br/>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+            <br/>
+            <button class="btn btn-secondary" id="pswd_button">Forgot your password ?</button>
+            <br/><br/>
+            <div id="PopUp" class="popup">
+                <div class="forgot_password">
+                    <span class="exit">&times;</span>
+                    <p><h3>We will send you a link to reset your password.</h3></p>
+                    <br/>
+                    <form>
+                    <p><label>Your email address:</label>
+                    <input type="text" name="email" onfocus="this.value=''" value="this.example@email.com" required>
+                     </p><br/>
+                    <p><button type="submit" class="btn btn-primary" onclick="alert('We have sent you an email.')">Reset password</button></p>
+                    </form>
+                </div>
+            </div>
+        
         <br/><br/><br/> You don't have an account yet ? You can <a href="P6.html">log on here.</a>
 
-    </div>
-
-    <!-- SOCIAL MEDIA ARTICLE-->
-    <div id="article">
-        <a href=""> <i class="fa fa-youtube-play"></i></a>
-        <a href=""> <i class="fa fa-twitter"></i></a>
-        <a href=""> <i class="fa fa-facebook-official"></i></a>
-        <a href=""> <i class="fa fa-instagram"></i></a>
     </div>
 
     <!-- FOOTER -->
@@ -117,7 +126,7 @@
             <div id="customer-service">
                 <h1>CUSTOMER SERVICE</h1>
                 <ul>
-                    <li><a href="">Contact US</a></li>
+                    <li><a href="ContactUs.html">Contact US</a></li>
                     <li><a href="">FAQ</a></li>
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Terms and Conditions</a></li>
@@ -147,5 +156,22 @@
     </footer>
 
 </body>
+<script type="text/javascript">
+var modal = document.getElementById("PopUp");
 
+document.getElementById("pswd_button").onclick = function() {
+  modal.style.display = "block";
+}
+
+document.getElementsByClassName("exit")[0].onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script type="text/javascript" src="../js/P3-meat + P5-P6.js"></script>
 </html>

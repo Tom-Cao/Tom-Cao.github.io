@@ -13,6 +13,8 @@
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="../css/P1.css">
+    <link rel="stylesheet" href="../css/P3-Frozen.css">
+    <!-- <link rel="stylesheet" href="../css/test.css"> -->
 
     <!-- Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/5995e1d6ee.js" crossorigin="anonymous"></script>
@@ -80,50 +82,60 @@
         </div>
     </nav>
 
-    <!-- COVID NEWS ARTICLE -->
-    <div id="covid-news">
-        <a href="404_Error.html" class="button">INFORMATION ABOUT COVID-19</a>
-    </div>
+    <!-- MAIN SECTION - PRODUCTS -->
+    <div class="container">
+        <div class="image">
+            <img src="../images/eggo.jpg" alt="404">
+        </div>
+        
+        <div class="">
 
-    <!-- MAIN SECTION -->
-    <section id="main-section">
-        <div id="delivery">
-            <a href="">
-                <h2>FREE HOME DELIVERY</h2>
-                <p>*free delivery on orders $50+*</p>
-                <img src="../images/freedelivery.png" alt="free delivery image"> <br>
-                <a href="404_Error.html" class="btn btn-dark" role="button">Shop now!</a>
-            </a>
-        </div>
-    </section>
+            <!-- PRODUCT NAME -->
+            <div class="heading">
+                <h1>Orginal Waffles</h1>
+                <hr/>
+            </div>
 
-    <!-- WEEKLY DEALS-->
-    <div id="featured-products" class="row">
-        <h2 id="title">WEEKLY DEALS</h2>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-1.html"><img src="../images/pizza.jpg" alt="pizza"></a> <br/>
-            <a href="P3-Frozen-1.html"><h4>Frozen Pepperoni Pizza</h4></a>
-            <p class="price1">$3.99 each</p>
-        </div>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-2.html"><img src="../images/fries.jpg" alt="fries"></a> <br/>
-            <a href="P3-Frozen-2.html"><h4>Frozen Fries</h4></a>
-            <p class="price2">$3.59 each</p>
-        </div>
-        <div class="col-sm-4">
-            <a href="P3-Frozen-3.html"><img src="../images/eggo.jpg" alt="eggo"></a> <br/>
-            <a href="P3-Frozen-3.html"><h4>Original Waffles</h4></a>
-            <p class="price3">$2.99 each</p>
-        </div>
-        <a href="404_Error.html" id="moreProducts">Show more products</a>
-    </div>
+            <!-- PRODUCT PRICE -->
+            <div>
+                <h2 id="price3">$2.99 each</h2>
+            </div>
 
-    <!-- SOCIAL MEDIA ARTICLE-->
-    <div id="article">
-        <a href="404_Error.html"> <i class="fa fa-youtube-play"></i></a>
-        <a href="404_Error.html"> <i class="fa fa-twitter"></i></a>
-        <a href="404_Error.html"> <i class="fa fa-facebook-official"></i></a>
-        <a href="404_Error.html"> <i class="fa fa-instagram"></i></a>
+            <!-- FEATURES -->
+            <div class="flexbox-container">
+                <div class="flexbox-item" id="flexbox-item-1">
+                    <label for="">Add to Cart</label>
+                    <i class="fas fa-shopping-cart" onclick="add2Cart()"></i>
+                </div>
+
+                <div class="flexbox-item" id="flexbox-item-2">
+                    <label for="">Quantity</label>
+                    <button id="minus" onclick="remove()">-</button>
+                    <label for="" id="quantity">1</label>
+                    <button id="plus" onclick="add()">+</button>
+                    <label for="">Subtotal: </label>
+                    <label for="" id="subtotalPrice">$2.99</label>
+                </div>
+
+                <div class="flexbox-item" id="flexbox-item-3">
+                    <label for="">Remove item</label>
+                    <i class="fas fa-trash" onclick="trash()"></i>
+                </div>
+            </div>
+
+            <!-- DETAILED DESCRIPTION -->
+            <div class="description">
+                <button class="accordion">Detailed Description</button>
+                <div class="panel">
+                    <hr>
+                    <p>Kellogg's Eggo® original waffles are deliciously golden, crispy and fluffy. They are made with no artificial flavours or colours. This package contains 8 waffles.</p>
+                    <p>Product Number: 502912312315</p>
+                    <hr>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
     <!-- FOOTER -->
@@ -170,7 +182,6 @@
 
     </footer>
 
-    <script type="text/javascript" src="../js/p1.js"></script>
     <script type="text/javascript" src="../js/p3-frozen.js"></script>
 
 </body>

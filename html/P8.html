@@ -25,227 +25,164 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <!-- Custom Scripts -->
+    <script src="../js/P8.js"></script>
+    
 </head>
 
 <body>
     
+    <!-- Header -->
     <header id="header">
         <a href="P1.html"> Cloud Grocery Inventory </a>
     </header>
 
+    <!-- Table -->
     <div style="text-align:center;">
-    <p><h5>Inventory of featured items</h5></p>
-    <table border="1">
+    <p><h5>Inventory List</h5></p>
+    <table id="productTable" border="1">
+    <!-- Adding and updating row -->
     <tr>
-        <th> Items to delete </th>
+        <!-- button to add/update -->
+        <td><button type="button" id="updateButton" class="btn btn-primary" onclick="updateTable();"> Add </button></td>
+        <!-- Text field to input new item or change existing items -->
+        <td><input type="text" class="form-control" placeholder="Enter product name" id="productname" />&nbsp;</td>
+        <td><input type="text" class="form-control" placeholder="Enter quantity" id="quantity" />&nbsp;</td>
+        <td><input type="text" class="form-control" placeholder="Enter unit price " id="unitprice" />&nbsp;</td>
+    </tr>
+    <!-- Table head -->
+    <tr>
+        <th> Edit </th>
         <th> Items </th>
         <th> Current quantity </th>
         <th> Current unit price </th>
-        <th> Edit quantity </th>
-        <th> Edit unit price </th>
+        <th> Delete </th>
     </tr>
-    <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+    <!-- Table content -->
+    <tr id="Pogo sticks">
+        <!-- Button to edit row -->
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
+        <!-- Row contents -->
         <td> Pogo sticks </td>
         <td> 33 </td>
         <td> 3.99 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <!-- Button to delete row -->
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Frozen Pizza (pproni.) </td>
         <td> 56 </td>
         <td> 2.99 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Kraft Dinner </td>
         <td> 114 </td>
         <td> 1.99 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <th>Add new item</th>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
-        <td> N/A </td>
-        <td> N/A </td>
-    </tr>
-    </table>
-    <p> <h5> Inventory of fruits </h5></p>
-    <table border="1">
-    <tr>
-        <th> Items to delete </th>
-        <th> Items </th>
-        <th> Current quantity </th>
-        <th> Current unit price </th>
-        <th> Edit quantity </th>
-        <th> Edit unit price </th>
-    </tr>
-    <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Apple </td>
         <td> 153 </td>
         <td> 0.99 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Avocado </td>
         <td> 75 </td>
         <td> 1.99 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Banana </td>
         <td> 76 </td>
         <td> 1.60 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Grapes </td>
         <td> 40 </td>
         <td> 2.79 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Orange </td>
         <td> 98 </td>
         <td> 0.92 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Kiwi </td>
         <td> 75 </td>
         <td> 1.29 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <th>Add new item</th>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
-        <td> N/A </td>
-        <td> N/A </td>
-    </tr>
-    </table>
-    <p> <h5> Inventory of vegetables </h5></p>
-    <table border="1">
-    <tr>
-        <th> Items to delete </th>
-        <th> Items </th>
-        <th> Current quantity </th>
-        <th> Current unit price </th>
-        <th> Edit quantity </th>
-        <th> Edit unit price </th>
-    </tr>
-    <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Broccoli </td>
         <td> 31 </td>
         <td> 3.50 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Cucumber </td>
         <td> 60 </td>
         <td> 2.29 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Lettuce </td>
         <td> 23 </td>
         <td> 1.25 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <td><input type="checkbox"/>&nbsp;</td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
         <td> Tomato </td>
         <td> 47 </td>
         <td> 1.19 </td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     <tr>
-        <th>Add new item</th>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
-        <td><input type="text"/>&nbsp;</td>
-        <td> N/A </td>
-        <td> N/A </td>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
+        <td> 2% Milk </td>
+        <td> 24 </td>
+        <td> 6.99 </td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
+    </tr>
+    <tr>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
+        <td> Cream Cheese </td>
+        <td> 61 </td>
+        <td> 2.89 </td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
+    </tr>
+    <tr>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
+        <td> Butter </td>
+        <td> 69 </td>
+        <td> 2.29 </td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
+    </tr>
+    <tr>
+        <td><button type='button' onclick='productDisplay(this);' class='btn btn-default'> <i class='fas fa-edit'></i></button> </td>
+        <td> Cheddar Cheese </td>
+        <td> 30 </td>
+        <td> 5.77 </td>
+        <td> <button type='button' onclick='deleteRow(this);' class='btn btn-default'> <i class='far fa-trash-alt'></i></button> </td>
     </tr>
     </table>
-    <p> <h5> Inventory of dairy produts </h5></p>
-    <table border="1">
-        <tr>
-            <th> Items to delete </th>
-            <th> Items </th>
-            <th> Current quantity </th>
-            <th> Current unit price </th>
-            <th> Edit quantity </th>
-            <th> Edit unit price </th>
-        </tr>
-        <tr>
-            <td><input type="checkbox"/>&nbsp;</td>
-            <td> 2% Milk </td>
-            <td> 24 </td>
-            <td> 2.99 </td>
-            <td><input type="text"/>&nbsp;</td>
-            <td><input type="text"/>&nbsp;</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"/>&nbsp;</td>
-            <td> Cream Cheese </td>
-            <td> 61 </td>
-            <td> 2.89 </td>
-            <td><input type="text"/>&nbsp;</td>
-            <td><input type="text"/>&nbsp;</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"/>&nbsp;</td>
-            <td> Butter </td>
-            <td> 69 </td>
-            <td> 2.29 </td>
-            <td><input type="text"/>&nbsp;</td>
-            <td><input type="text"/>&nbsp;</td>
-        </tr>
-        <tr>
-            <td><input type="checkbox"/>&nbsp;</td>
-            <td> Cheddar Cheese </td>
-            <td> 30 </td>
-            <td> 5.77 </td>
-            <td><input type="text"/>&nbsp;</td>
-            <td><input type="text"/>&nbsp;</td>
-        </tr>
-        <tr>
-            <th>Add new item</th>
-            <td><input type="text"/>&nbsp;</td>
-            <td><input type="text"/>&nbsp;</td>
-            <td><input type="text"/>&nbsp;</td>
-            <td> N/A </td>
-            <td> N/A </td>
-        </tr>
-        </table>
         
     <!-- Button to confirm edits -->
     <br>

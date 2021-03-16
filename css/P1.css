@@ -6,6 +6,7 @@
     letter-spacing: 5px;
 }
 
+
 #header a {
     text-decoration: none;
     color: white;
@@ -204,13 +205,18 @@ section #delivery a {
 }
 
 #featured-products a:hover {
-    color: rgb(4, 108, 199);;
+    color: rgb(4, 108, 199);
     text-decoration: underline;
+}
+
+#moreProducts {
+    width: auto;
+    margin: auto;
 }
 
 /* ARTICLE */
 #article {
-    background-color: rgb(52, 177, 235);
+    background-color: rgb(4, 108, 199);
     height: 1.5em;
     font-size: 2.5em;
     text-align: center;
@@ -222,7 +228,7 @@ section #delivery a {
 }
 
 #article i:hover {
-    color: rgb(4, 108, 199);
+    color: rgb(52, 177, 235);
     transform: scale(1.1);
 }
 
@@ -443,6 +449,13 @@ footer {
 
     footer #information {
         text-align: left;
+    }
+
+}
+
+@media only screen and (max-width: 350px) {
+    #menu form a i {
+        font-size: 10px;
     }
 
 }

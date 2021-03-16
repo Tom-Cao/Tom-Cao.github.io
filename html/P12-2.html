@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <head>
   <meta charset = "utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="Author" content="Mélina Deneuve, Kenny Phan, Joe El-Khoury, Titouan Sablé, Tommy Cao, Muhammad Mubashir">
-  <meta name = "description" content = "Order List Page">
+  <meta name = "description" content = "Edit Order List for Order 1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="Keywords" content="Cloud, Online Grocery">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cloud | Edit Order</title>
 
   <!-- Font Awesome Bootstrap -->
@@ -17,18 +18,21 @@
 
   <!-- Bootstrap JS Inquiries -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+  
   <link rel = "shortcut icon" type = "img/jpg" href = "../images/cloud.png"/>
   <link rel = "stylesheet" type = "text/css" href = "../css/P12.css"/>
+
+  <script type = "text/javascript" src = "../js/P12.js"></script>
+
 </head>
 
 <body>
 
-  <!-- Hedaer -->
+  <!-- Header -->
   <header id="header">
     <a href="P1.html"> Cloud Grocery Orders </a>
   </header>
-  
+
  <!-- Menu created from Bootstrap template -->
  <nav class = "navbar navbar-light navbar-expand-lg bg-light">
    <div class = "container-fluid">
@@ -56,110 +60,148 @@
       <img class = "avatar" src = "../images/default_avatar.png"/>
       <h4 class="card-title">Joe</h4>
       <h6 class = "card-title">EL-KHOURY</h6>
-      <p1 class="card-text" id = "Order ID">Order ID: #00426719572</p1>
+      <p1 class="card-text" id = "Order ID">Order ID: #68281968176</p1>
       <br />
       <br />
 
       <form>
-        <table>
+        <table id = "order_table">
           <tr>
             <th style = "text-align: left;">Item</th>
-            <th>Current Amount</th>
-            <th>Edit Amount</th>
+            <th>Amount</th>
+            <th>Edit</th>
             <th>Delete?</th>
           </tr>
-          <tr>
+          <tr id = "Apples">
             <td id = "item"> <img src = "../images/download.png" id = "item" class = "center">
               Apples
             </td>
-            <td id = "current-amount">12</td>
+            <td id = "amount_apples">12</td>
             <td>
               <form>
-                <input type = "text">
+                <button class="button" type="button" onclick = "editAmount('apples')">
+                  Edit Amount
+                </button>
               </form>
             </td>
-            <td><input type = "checkbox"></td>
+            <td><button class = "button" type = "button" id = "delete" onclick = "deleteItem('Apples')">Delete</button></td>
           </tr>
-          <tr>
+          <tr id = "Oranges">
             <td id = "item">
               <img src = "../images/orange.png" id = "item" class = "center">
               Oranges
             </td>
-            <td id = "current-amount">6</td>
+            <td id = "amount_oranges">6</td>
             <td>
               <form>
-                <input type = "text">
-              </form>
+                <button class="button" type="button" onclick = "editAmount('oranges')">
+                  Edit Amount
+                </button>
             </td>
             <td>
-              <input type = "checkbox">
+              <button class = "button" type = "button" id = "delete" onclick = "deleteItem('Oranges')">Delete</button>
             </td>
           </tr>
-          <tr>
+          <tr id = "Eggs">
             <td id = "item">
               <img src = "../images/Eggs.png" id = "item" class = "center">
               Eggs
             </td>
-            <td id = "current-amount">12</td>
+            <td id = "amount_eggs">12</td>
             <td>
               <form>
-                <input type = "text">
-              </form>
+                <button class="button" type="button" onclick = "editAmount('eggs')">
+                  Edit Amount
+                </button>
             </td>
             <td>
-              <input type = "checkbox">
+              <button class = "button" type = "button" id = "delete" onclick = "deleteItem('Eggs')">Delete</button>
             </td>
           </tr>
-          <tr>
+          <tr id = "Milk">
             <td id = "item">
               <img src = "../images/Milk.png" id = "item" class = "center">
               Milk
             </td>
-            <td id = "current-amount">2</td>
+            <td id = "amount_milk">2</td>
             <td>
               <form>
-                <input type = "text">
-              </form>
+                <button class="button" type="button" onclick = "editAmount('milk')">
+                  Edit Amount
+                </button>
             </td>
             <td>
-              <input type = "checkbox">
+              <button class = "button" type = "button" id = "delete" onclick = "deleteItem('Milk')">Delete</button>
             </td>
           </tr>
-          <tr>
+          <tr id = "PotatoPacks">
             <td id = "item">
               <img src = "../images/Potatoes.png" id = "item" class = "center">
               Potato Packs
             </td>
-            <td id = "current-amount">1</td>
+            <td id = "amount_potatopacks">1</td>
             <td>
               <form>
-                <input type = "text">
-              </form>
+                <button class="button" type="button" onclick = "editAmount('potatopacks')">
+                  Edit Amount
+                </button>
             </td>
             <td>
-              <input type = "checkbox">
+              <button class = "button" type = "button" id = "delete" onclick = "deleteItem('PotatoPacks')">Delete</button>
             </td>
           </tr>
   
-          <tr>
+          <tr id = "Steak">
             <td id = "item">
               <img src = "../images/Steak.png" id = "item" class = "center">
               Premium Steak
             </td>
-            <td id = "current-amount">1</td>
+            <td id = "amount_steak">1</td>
             <td>
               <form>
-                <input type = "text">
+                <button class="button" type="button" onclick = "editAmount('steak')">
+                  Edit Amount
+                </button>
               </form>
             </td>
             <td>
-              <input type = "checkbox">
+              <button class = "button" type = "button" id = "delete" onclick = "deleteItem('Steak')">Delete</button>
             </td>
-          </tr>
-        </table>
-        <br />
+            </tr>
+          </table>
 
-        <table>
+          <br />
+          <br />
+
+          <table>
+            <th style = "text-align: left">Items to Add</th><br />
+            <tr>
+              <td id = "item_name">Item
+                <select name = "groceries" id = "new_item">
+                  <option value = "Apples">Apples</option>
+                  <option value = "Oranges">Oranges</option>
+                  <option value = "Strawberry">Strawberry</option>
+                  <option value = "Pear">Pear</option>
+                  <option value = "Milk">Milk</option>
+                  <option value = "orangejuice">Orange Juice</option>
+                  <option value = "Chicken">Chicken</option>
+                  <option value = "Falafel">Falafel</option>
+                  <option value = "Ice_Cream">Ice Cream</option>
+                </select>
+              </td>
+              <td id = "item_amount">Amount<br/>
+                <input type = "text" id = "number_item">
+              </td>
+              <td>
+                <button class="button" type="button" onclick = "addItem()">
+                  Add Item
+                </button>
+              </td>
+            </tr>
+          </table>
+
+
+        <!-- <table>
           <tr>
             <th style = "text-align: left;">Add Item</th>
             <th>Amount</th>
@@ -212,14 +254,14 @@
               </form>
             </td>
           </tr>
-        </table>
+        </table> -->
 
         <br />
-
+        
         <form action = "P11.html">
-          <input type = "submit" class = "button btn btn-primary" value = "Save">
+          <input type = "submit" class = "button btn btn-primary" value = "Save"/>
         </form>
-
+        
       </div>
     </div>
     <footer style="text-align:center;">

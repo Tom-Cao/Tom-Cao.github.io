@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <title>Cart | Cloud</title>
+    <title>Avocado | Cloud</title>
 
     <!-- Meta tags-->
     <meta charset="UTF-8">
@@ -12,11 +12,7 @@
     <meta name="Author" content="Mélina Deneuve, Kenny Phan, Joe El-Khoury, Titouan Sablé, Tommy Cao, Muhammad Mubashir">
     <meta name="Keywords" content="Cloud, Online Grocery">
 
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="../css/P1.css">
-    <link rel="stylesheet" href="../css/P4.css">
-
-    <!-- Font Awesome CDN -->
+    <!-- Font Awesome CSS -->
     <script src="https://kit.fontawesome.com/5995e1d6ee.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CDN -->
@@ -24,12 +20,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../javascript/p3.js"></script>
 
-    <!-- <script src="../javascript/p3.js"></script> -->
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="../css/P1.css">
+    <link rel="stylesheet" href="../css/P3-fruits.css">
 
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <!-- HEADER -->
     <header id="header">
         <a href="P1.html" class="display-4"> <span id="title">CLOUD</span> ONLINE GROCERY </a>
@@ -52,6 +53,7 @@
             </form>
         </div>
     </div>
+
     <!-- NAVIGATION BAR -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-light">
         <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -80,157 +82,119 @@
             </ul>
         </div>
     </nav>
-    <!-- Page Content -->
-    <div class="cartContainer">
-        <!-- Products in the Cart -->
-        <div class="products" id="prod">
-            <div class="heading">
-                <h2>My Cart</h2>
-            </div>
-            <!-- <div class="container-fluid mt-100">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
 
-                            <div class="card-body cart">
-                                <div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
-                                    <h3><strong>Your Cart is Empty</strong></h3>
-                                    <a href="#" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>   -->
-            <!-- Each Item Card -->
-            <div class="item">
-                <div class="image">
-                    <img src="../images/apple.jpg" alt="404" id="productImage">
-                </div>
-                <div class="productRow">
-                    <div class="productName">
-                        <h2>Apple</h2>
-                        <p>$0.99/each</p>
-                    </div>
-                    <div class="addProduct">
-                        <button class="btn btn-light" style="vertical-align: middle;" onclick="add(this)">+</button>
-                        <span>1</span>
-                        <button class="btn btn-light" onclick="sub(this)">-</button>
-                    </div>
-                    <div class="price">
-                        <h3>$0.99</h3>
-                    </div>
-                    <div class="totalPrice">
-                        <h3>$0.99</h3>
-                    </div>
-                    <div class="delItem">
-                        <button type="button" class="btn btn-outline-light " onclick="deleteItem(this)">
-                            <img src="../images/delete.png" alt="404" id="delBtn">
-                        </button>
-                    </div>
-
-
-                </div>
-
-            </div>
-            <div class="item">
-                <div class="image">
-                    <img src="../images/broccoli.jpg" alt="404" id="productImage">
-                </div>
-                <div class="productRow">
-                    <div class="productName">
-                        <h2>Broccoli</h2>
-                        <p>$3.50/each</p>
-                    </div>
-                    <div class="addProduct">
-                        <button class="btn btn-light" style="vertical-align: middle;" onclick="add(this)">+</button>
-                        <span>1</span>
-                        <button class="btn btn-light" onclick="sub(this)">-</button>
-                    </div>
-                    <div class="price">
-                        <h3>$3.50</h3>
-                    </div>
-                    <div class="totalPrice">
-                        <h3>$3.50</h3>
-                    </div>
-                    <div class="delItem">
-                        <button type="button" class="btn btn-outline-light" onclick="deleteItem(this)">
-                            <img src="../images/delete.png" alt="404" id="delBtn" >
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-            <div class="item">
-                <div class="image">
-                    <img src="../images/cucumber.jpg" alt="404" id="productImage">
-                </div>
-                <div class="productRow">
-                    <div class="productName">
-                        <h2>Cucumber</h2>
-                        <p>$2.50/each</p>
-                    </div>
-                    <div class="addProduct">
-                        <button class="btn btn-light" style="vertical-align: middle;" onclick="add(this)">+</button>
-                        <span>1</span>
-                        <button class="btn btn-light" onclick="sub(this)">-</button>
-                    </div>
-                    <div class="price">
-                        <h3>$2.50</h3>
-                    </div>
-                    <div class="totalPrice">
-                        <h3>$2.50</h3>
-                    </div>
-                    <div class="delItem">
-                        <button type="button" class="btn btn-outline-light " onclick="deleteItem(this)">
-                            <img src="../images/delete.png" alt="404" id="delBtn">
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
+    <!--  -->
+    <div class="productCard">
+        <div class="image">
+            <img src="../images/avocado.jpg" alt="404" class="img-responsive  productImage">
         </div>
-        <!-- total amount -->
-        <div class="amount">
-            <div class="bill">
-                <hr>
-                <h2>Cart Summary</h2>
-                <hr>
-                <!-- Bootstrap dt and dl tag -->
-                <dl class="row total">
-                    <dt class="col-sm-3">Subtotal</dt>
-                    <dl class="col-sm-9">$6.99</dl>
-                    <dt class="col-sm-3">Taxes</dt>
-                    <dl class="col-sm-9">$0.00</dl>
-                    <dt class="col-sm-3">Extra charges</dt>
-                    <dl class="col-sm-9">$5.00</dl>
-                    <hr>
-                    <dt class="col-sm-3">Total</dt>
-                    <dl class="col-sm-9">$6.99</dl>
-                </dl>
-                <div class="guidelines">
-                    <p>
-                        *Your order total may vary based on savings, promotions, actual weight of the products and prices in effect at the time of order pickup or delivery. The product availability and prices may vary based on the selected store and service.
-                    </p>
-                </div>
-
+        <div class="container">
+            <div class="heading">
+                <h1>Avacado</h1>
+                <hr/>
             </div>
-            <!-- Bootstrap used for buttons -->
-            <div class="buttons">
-                <div class="checkout">
-                    <button type="button" class="btn btn-primary" onclick="checkout()">CHECK OUT</button>
-                </div>
-                <div class="continueShopping">
-                    <a href="P2-1.html" class="btn btn-primary">Continue Shopping</a>
-
-                </div>
-
+            <div class="text">
+                <p>$1.99/each</p>
             </div>
+            <div class="price">
+                <h2>$1.99</h2>
+            </div>
+            <div class="dropdown">
+                <select name="quantity" id="quantity">
+                    <option value="0" selected>Quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+            </div>
+            <div class="btn">
+                <button class="cartBtn" onclick="addToCart()">
+                    <img src="../images/shopping-cart.png" alt="404" class="cart">
+                </button>
+            </div>
+            <div class="discription">
+                <button onclick="dropdown()">
+                    <div class="discription2">
+                        <h1>Product discription</h1>
 
+                        <!-- <img src="../images/down-arrow.png" alt="404"> -->
+                    </div>
+                        
+                </button>
 
+                <hr/>
+                <p style="visibility: hidden;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem doloribus vitae, reprehenderit quibusdam et itaque! Nihil error cumque numquam repellendus, cupiditate ducimus minima suscipit consequatur nisi. Ab, unde minus? Id!
+                </p>
+            </div>
         </div>
     </div>
+    <div class="heading1">
+        <h1>Frequently Bought Together</h1>
+    </div>
+    <div class="container2">
+        <div class="item1">
+            <div class="card " style="width: 18rem;">
+                <a href="#">
+                    <img class="card-img-top" src="../images/avocado.jpg" alt="Card image cap" href="#">
+                </a>
+
+                <div class="card-body">
+                    <h5 class="card-title ">Avacado</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <span class="card-text price ">$20.0</span>
+                <div class="card-body">
+                    <button class="cartBtn">
+                        <img src="../images/shopping-cart.png" alt="404" class="cart">
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="card" style="width: 18rem;">
+                <a href="#">
+                    <img class="card-img-top" src="../images/grapes.jpg" alt="Card image cap" href="#">
+                </a>
+
+                <div class="card-body">
+                    <h5 class="card-title ">Grapes</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                <span class="card-text price ">$19.0</span>
+                <div class="card-body">
+                    <button class="cartBtn">
+                        <img src="../images/shopping-cart.png" alt="404" class="cart">
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div class="item1">
+            <div class="card" style="width: 18rem;">
+                <a href="#">
+                    <img class="card-img-top" src="../images/broccoli.jpg" alt="Card image cap" href="#">
+                </a>
+
+                <div class="card-body">
+                    <h5 class="card-title ">Broccoli</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+                <span class="card-text price ">$25.0</span>
+                <div class="card-body">
+                    <button class="cartBtn">
+                        <img src="../images/shopping-cart.png" alt="404" class="cart">
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div id="information">
@@ -274,6 +238,7 @@
 
     </footer>
 
+    <script src="../js/p3-fruits.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -284,7 +249,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
-    <script src="../js/p4.js"></script>
 </body>
 
 </html>

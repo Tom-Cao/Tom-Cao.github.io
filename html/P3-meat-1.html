@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Register | Cloud</title>
+    <title>Steak | Cloud</title>
 
     <!-- Meta tags-->
     <meta charset="UTF-8">
@@ -76,77 +76,69 @@
             </ul>
         </div>
     </nav>
-    <!--Form - main part of the page-->
-    <div class="container" id="register">
-        <div class="title">
-            <h2>Your Login infos:</h2>
-        </div>
-        <form action="">
-            <label>Username:</label>&nbsp;
-            <input type="text" name="Username" onfocus="this.value=''" value="Username" required/>
-            <br/> <br/>
-
-            <label>Choose a password:</label>&nbsp;
-            <input type="password" id="Password1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" alert="One uppercase, one lowercase, one number and at least 8 characters required." title="One uppercase, one lowercase, one number and at least 8 characters required."
-                required/><br/><br/>
-            <label>Confirm the password</label>&nbsp;
-            <input type="password" id="Password2" alert="It must be identical as the previous password" title="It must be identical as the previous password" required/>
-            <br/><br/>
-            <br/>
-            <div class="container" id="register">
-                <div class="title">
-                    <h2>Your personal infos:</h2>
-                </div>
-
-                <label>First name:</label>&nbsp;
-                <input type="text" name="FirstName" onfocus="this.value=''" value="Enter your first name" required>&emsp;
-                <label>Last name:</label>&nbsp;
-                <input type="text" name="LastName" onfocus="this.value=''" value="Enter your last name" required>
-                <br/> <br/> <br/>
-
-                <label>Email:</label>&nbsp;
-                <input type="text" name="email" onfocus="this.value=''" value="this.example@email.com" required>
-                &emsp;<label>Phone number:
-			(<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="XXX" aria-label="3-digit area code" size="1" maxlength="3" onkeypress='validate(event)' required/>)
-   				<input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="XXX" aria-label="3-digit prefix" size="1" maxlength="3" onkeypress='validate(event)' required/> -
-			   	<input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="XXXX" aria-label="4-digit number" size="1" maxlength="4" onkeypress='validate(event)' required/>
-			</label>
+    <div class="container">
+        <table>
+                    <tr>
+                        <td>
+                            &nbsp;<img src="../images/steak.jpg" alt="404" class="img-responsive  productImage">
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <h1>Steak</h1>
+                            <h2 class="price1">$3.99</h2>
+                        </td>
+                    </tr>
+                </table>
                 <br/>
-                <div class="title">
-                    <h4>Your address:</h4>
+        
+        <div class="">
+
+            <!-- PRODUCT NAME -->
+            <div class="heading">
+                
+            </div>
+
+            <!-- FEATURES -->
+            <div class="flexbox-container">
+                <div class="flexbox-item" id="flexbox-item-1">
+                    <label for="">Add to Cart</label>
+                    <i class="fas fa-shopping-cart" onclick="add2Cart()"></i>
                 </div>
 
-                <label>House number:</label>&nbsp;
-                <input type="number" id="number" name="AddressNumber" required>
+                <div class="flexbox-item" id="flexbox-item-2">
+                    <label for="">Quantity</label>
+                    <button id="minus" onclick="remove()">-</button>
+                    <label for="" id="quantity">1</label>
+                    <button id="plus" onclick="add()">+</button>
+                    <label for="">Subtotal: </label>
+                    <label for="" id="subtotalPrice">$3.99</label>
+                </div>
 
-                &emsp;<label>Address type:</label>&nbsp;
-
-                <select name="address_type" onchange="if(this.options[this.selectedIndex].value=='Other'){
-                toggleField(this,this.nextSibling);
-                this.selectedIndex='0';
-            }">
-            <option><i>Choose</i></option>
-             <option>Alley</option>
-             <option>Avenue</option>
-             <option>Boulevard</option>
-             <option>Street</option>
-             <option value="Other">Other</option>
-          </select><input required name="address_type" style="display:none;" disabled="disabled" onblur="if(this.value==''){toggleField(this,this.previousSibling);}"> &emsp; &nbsp; &nbsp;&nbsp;
-
-                <label>Street name:</label>&nbsp;
-                <textarea class="form-field" name="address" required></textarea>
-                <br/><br/>
-                <label>City:</label>&nbsp;
-                <input type="text" name="City" onfocus="this.value=''" value="City" required> &emsp;
-                <label>Postal code:</label>&nbsp;
-                <input type="text" name="PostalCode" onfocus="this.value=''" value="Postal code" required> &emsp;
-
-                <label>Country:</label>&nbsp;
-                <input type="text" name="Country" onfocus="this.value=''" value="Country" required>
-        </form>
-        <br/><br/>
-        <button type="submit" onclick="matchPassword()" class="btn btn-primary">Register</button>
+                <div class="flexbox-item" id="flexbox-item-3">
+                    <label for="">Remove item</label>
+                    <i class="fas fa-trash" onclick="trash()"></i>
+                </div>
+            </div>
+            <!-- DETAILED DESCRIPTION -->
+            <div class="center">
+                <button class="btn btn-primary" id="description_button">Description</button></div>
+                <div id="PopUp" class="popup">
+                    <div class="description">
+                        <span class="exit">&times;</span>
+                        <p><h3 style="text-align:center">Steak</h3></p>
+                        <br/>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <br/>
+                    
+                </div>
+            </div>
         </div>
+    </div>
 
         <!-- FOOTER -->
         <footer>
@@ -193,5 +185,5 @@
 </body>
 
 <script type="text/javascript" src="../js/P3-meat + P5-P6.js"></script>
-
+   
 </html>
