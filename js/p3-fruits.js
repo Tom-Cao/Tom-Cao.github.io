@@ -4,6 +4,7 @@ image.alt = "404";
 var image2 = document.createElement("img");
 image2.src = "../images/down-arrow.png";
 image2.alt = "404";
+var price = document.getElementsByClassName("price")[0].getElementsByTagName("h2")[0].innerText;
 window.addEventListener("load", function() {
     var image = document.createElement("img");
     image.src = "../images/up-arrow.png";
@@ -14,6 +15,21 @@ window.addEventListener("load", function() {
     var arrow = document.getElementsByClassName("discription2")[0];
     arrow.appendChild(image);
 })
+
+function changeValue(target) {
+    if (target.value == 0 && target.value == 1) {
+        document.getElementsByClassName("price")[0].getElementsByTagName("h2")[0].innerText = price;
+    } else {
+        var price2 = price;
+        price2 = price.slice(1, price2.length);
+        price2 = parseFloat(price2);
+        console.log(price2);
+        price2 = price2 * (target.value);
+        price2 = price2.toPrecision(3);
+        document.getElementsByClassName("price")[0].getElementsByTagName("h2")[0].innerText = "$" + price2;
+    }
+
+}
 
 function dropdown() {
     var text = document.getElementsByClassName("discription")[0].getElementsByTagName("p")[0];
