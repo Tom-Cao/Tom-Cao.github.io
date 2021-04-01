@@ -1,6 +1,8 @@
 # Cloud **Building a Grocery Web Page**    
 This project is part of the Concordia course SOEN 287: "Web Programming"
-+ To see online site: [Cloud Grocery] (https://tom-cao.github.io)
++ To see online site: [Cloud Grocery] 
+[Cloud Grocery]: https://tom-cao.github.io
+
 
 ## **Project members**   
 + Mélina Deneuve - ID# 40153103
