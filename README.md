@@ -1,3 +1,3 @@
 Personal portfolio website highlighting my qualifications and experience
 
-Go to tommycao.dev
+To see the website, click [here] (https://tommycao.dev/)
